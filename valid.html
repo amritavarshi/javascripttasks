@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form name="myform"  method="post" action="#" onsubmit="return email_validation();">  
+Email: <input type="text" name="email"><br/> 
+Password: <input type="password" name="password">  
+<input type="submit" value="submit">  
+</form>
+<script>
+function email_validation() 
+{  
+var x=document.myform.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+{
+  	alert("Please enter a valid e-mail address");  
+   
+}
+
+var y=document.myform.password.value;
+	if (y==null || y=="")
+{  
+  alert("password can't be blank");  
+    
+}
+else if(y.length<8)
+{  
+  alert("Password must be at least 8 characters long.");  
+  
+  }     
+}  
+
+</script> 
+
+</body>
+</html>
